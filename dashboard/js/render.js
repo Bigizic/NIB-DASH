@@ -4,5 +4,5 @@
  * 
  */
 $(document).ready(function() {
-    $('.dashboard_render').createCalendar({color: 'red'});
+    $('.dashboard_render').createCalendar();
 })
