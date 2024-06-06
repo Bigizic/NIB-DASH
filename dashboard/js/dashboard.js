@@ -142,19 +142,23 @@
     
       const daysOfTheWeekList = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
       let currentDay = $.inArray(newAlphaDate, daysOfTheWeekList);  // get current day by checking if new alphabet date is in days of the week list
-    
+
+      // ==== for loop to iterate between numbers of days in the current month ====
       for (let i = 1; i <= numberOfDaysInCurrentMonth; i++) {
-        dates.push({ [daysOfTheWeekList[currentDay]]: i });
-        currentDay = (currentDay + 1) % 7;
+        dates.push({ [daysOfTheWeekList[currentDay]]: i });  // appends something like this { MON: 0 } to dates List
+        currentDay = (currentDay + 1) % 7;  // change current day
       }
-    
+
+      // ==== iterate through dates list and perform operations on the dictionary in the list ====
       $.each(dates, function (index, dict) {
+        // ==== get key and value from dictionary ====
         $.each(dict, function (key, value) {
           $('.days div').each(function (e) {
             const thisClsName = $(this)['0'].className;
             if ($(`.${thisClsName} p`).text().trim() === key) {
               if (value === currentDate.getDate()) { // old current date from line 320
-                $($(`.${thisClsName} ul`)).append(`<li style="" class="current_calender_date"> ${value} </li>`);
+                $($(`.${thisClsName} ul`)).append(`<li style="position: relative; padding: 16.5px 8px;" class="current_calender_date"> ${value}
+                <span class="current_calender_background"></span></li>`);
               } else {
                 $($(`.${thisClsName} ul`)).append(`<li style="padding: 16.5px 8px;"> ${value} </li>`);
               }

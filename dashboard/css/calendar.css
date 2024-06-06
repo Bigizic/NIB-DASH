@@ -184,8 +184,8 @@
     font-size: 12px;
     height: 340px;
   }
-  
-  .current_calender_date {
+
+  .current_calender_background {
     background: yellow;
     height: 30px;
     width: 30px;
@@ -193,6 +193,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 8px;
+    z-index: -1;
+    right: 3px;
   }
 
 .c-container {
