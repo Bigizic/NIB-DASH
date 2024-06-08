@@ -44,6 +44,7 @@ $(document).ready(function() {
 | setLeftBackgroundColor() | sets background color for the left side bar |
 | setCurrentDayColor() | sets background color for the current day |
 | setEventText() | updates event text |
+| setFontType() | updates the font for the whole text, accepts font1- font15 |
 
 
 
@@ -56,6 +57,7 @@ calendar.setBackgroundColor('pink');
 calendar.setLeftBackgroundColor('violet');
 calendar.setCurrentDayColor('blue');
 calendar.setEventText('Event five today'); // sets custom event
+calendar.setFontType('font7');
 });
 ````
 <a href="./dashboard/js/render.js">as shown here</a>
