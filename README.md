@@ -36,6 +36,14 @@ $(document).ready(function() {
 ````
 
 
+# Fonts Preview
+
+| font name | image |
+| ----- | ----- |
+| Font 1 | <img src="./dashboard/images/font_1.png" height="50%" width="60%"> |
+| Font 7 | <img src="./dashboard/images/font_7.png" height="50%" width="60%"> |
+
+
 ### Available methods and how to use
 
 | method | details |
@@ -61,3 +69,4 @@ calendar.setFontType('font7');
 });
 ````
 <a href="./dashboard/js/render.js">as shown here</a>
+
