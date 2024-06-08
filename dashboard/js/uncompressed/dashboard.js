@@ -10,6 +10,7 @@
       leftBackgroundColor: 'yellow',
       currentDayColor: 'purple',
       eventText: 'this is an event',
+      fontType: 'font1',
     }, options);
     
     const state = {
@@ -17,6 +18,7 @@
       leftBackgroundColor: settings.leftBackgroundColor,
       currentDayColor: settings.currentDayColor,
       eventText: settings.eventText,
+      fontType: settings.fontType,
     };
     
     // ==== Define methods for getting and setting styles ====
@@ -62,6 +64,22 @@
       },
       getEventText: function() {
         return state.eventText;
+      },
+
+      // ==== set custom font ====
+      setFontType: function(font) {
+        state.fontType = font;
+        $(document).ready(function() {
+          if (state.fontType === 'font7') {
+            $(this).find('body').css('font-family', state.fontType);
+            $(this).find('body').css('font-size-adjust', '0.4');
+          } else {
+          $(this).find('body').css('font-family', state.fontType);
+          }
+        })
+      },
+      getFontType: function() {
+        return state.fontType;
       }
 
     };
@@ -225,13 +243,9 @@
           });
         });
       });
-    // ==== change font-size-adjust for font 7 ====
-    if ($('body').css('font-family') === 'font7') {
-      $('body').css('font-size-adjust', '0.4')
-    }
+
     }
     dashboardCalendar();
-
   });
   
   return $(this).html(calendarHTML);

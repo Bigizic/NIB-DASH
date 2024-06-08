@@ -9,4 +9,5 @@ $(document).ready(function() {
     calendar.setLeftBackgroundColor('');
     calendar.setCurrentDayColor('');
     calendar.setEventText('Event one today'); // sets custom event
+    calendar.setFontType('font7');
 })
