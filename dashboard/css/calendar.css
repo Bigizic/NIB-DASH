@@ -1,3 +1,116 @@
+body {
+  font-family: font7;
+}
+
+
+@font-face {
+  font-family: 'font1';
+  src: url('../css/fonts/LA\ LUXE.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font2';
+  src: url('../css/fonts/AdornStoryScript.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font3';
+  src: url('../css/fonts/AdornStorySerif.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font4';
+  src: url('../css/fonts/DiamondGrotesk.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font5';
+  src: url('../css/fonts/NABILA\ 400.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font6';
+  src: url('../css/fonts/NeueHaasDisplayMediu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font7';
+  src: url('../css/fonts/Pavelt-VG24B.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font8';
+  src: url('../css/fonts/Pavelt\ 400.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font9';
+  src: url('../css/fonts/PPMori-Extralight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font10';
+  src: url('../css/fonts/PPMori-ExtralightItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font11';
+  src: url('../css/fonts/PPMori-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font12';
+  src: url('../css/fonts/PPMori-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font13';
+  src: url('../css/fonts/PPMori-SemiBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font14';
+  src: url('../css/fonts/Rugen\ Expanded\ 400.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'font15';
+  src: url('../css/fonts/SummerDreamSansDemo\ 400.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 .calendar-base {
     width: 700px;
     height: fit-content;
@@ -18,7 +131,7 @@
     font-weight: bold;
   }
   .month-color { color: black; }
-  .month-hover:hover{ color: #CADA48 !important; }
+  .month-hover:hover{ color: saddlebrown !important; }
   
   .months {
     color: #fff;
@@ -197,6 +310,17 @@
     top: 8px;
     z-index: -1;
     right: 3px;
+  }
+
+  .days li, .current_calender_date, .month-hover {
+    transition: font-size 0.3s ease-in-out;
+    transition: font-weight 0.3s ease-in-out;
+    cursor: default;
+  }
+
+  .days li:hover, .current_calender_date:hover {
+    font-size: 15px;
+    font-weight: 900;
   }
 
 .c-container {
