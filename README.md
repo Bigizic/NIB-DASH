@@ -40,8 +40,8 @@ $(document).ready(function() {
 
 | font name | image |
 | ----- | ----- |
-| Font 1 | <img src="./dashboard/images/font_1.png" height="50%" width="100%"> |
-| Font 7 | <img src="./dashboard/images/font_7.png" height="50%" width="100%"> |
+| Font 1 | <img src="./dashboard/images/font_1.png" height="30%" width="100%"> |
+| Font 7 | <img src="./dashboard/images/font_7.png" height="30%" width="100%"> |
 
 
 ### Available methods and how to use
