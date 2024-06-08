@@ -7,5 +7,6 @@ $(document).ready(function() {
     let calendar = $('.dashboard_render').createCalendar().data('createCalendar');
     calendar.setBackgroundColor('');
     calendar.setLeftBackgroundColor('');
-    calendar.setCurrentDayColor('')
+    calendar.setCurrentDayColor('');
+    calendar.setEventText('Event one today'); // sets custom event
 })

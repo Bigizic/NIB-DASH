@@ -9,12 +9,14 @@
       backgroundColor: 'lightseagreen',
       leftBackgroundColor: 'yellow',
       currentDayColor: 'purple',
+      eventText: 'this is an event',
     }, options);
     
     const state = {
       backgroundColor: settings.backgroundColor,
       leftBackgroundColor: settings.leftBackgroundColor,
       currentDayColor: settings.currentDayColor,
+      eventText: settings.eventText,
     };
     
     // ==== Define methods for getting and setting styles ====
@@ -49,6 +51,17 @@
       },
       getCurrentDayColor: function() {
         return state.currentDayColor;
+      },
+
+      // ==== current event text details ====
+      setEventText: function(text) {
+        state.eventText = text;
+        $(document).ready(function() {
+          $(this).find('.current_event_details').text(state.eventText);
+        })
+      },
+      getEventText: function() {
+        return state.eventText;
       }
 
     };
@@ -117,7 +130,7 @@
       <div class="current-events">Current Events
         <br/>
         <ul>
-          <li style="font-size: 10px; margin-left: 10%;">Day 09 Daily CSS Image</li>
+          <li class="current_event_details" style="font-size: 10px; margin-left: -12px;">This is an event</li>
         </ul>
       </div>
     </div>
