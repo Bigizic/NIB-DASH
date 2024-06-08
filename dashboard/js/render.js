@@ -4,5 +4,8 @@
  * 
  */
 $(document).ready(function() {
-    $('.dashboard_render').createCalendar();
+    let calendar = $('.dashboard_render').createCalendar().data('createCalendar');
+    calendar.setBackgroundColor('');
+    calendar.setLeftBackgroundColor('');
+    calendar.setCurrentDayColor('')
 })

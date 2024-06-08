@@ -3,12 +3,58 @@
 */
 
 (function($){		
-	$.fn.createCalendar = function(options){
-    
+	$.fn.createCalendar = function(options) {    
+    // ==== Default options ====
     const settings = $.extend({
-      calender_background: { color: 'red' },
-      calender_left: { color: 'purple' },
+      backgroundColor: 'lightseagreen',
+      leftBackgroundColor: 'yellow',
+      currentDayColor: 'purple',
     }, options);
+    
+    const state = {
+      backgroundColor: settings.backgroundColor,
+      leftBackgroundColor: settings.leftBackgroundColor,
+      currentDayColor: settings.currentDayColor,
+    };
+    
+    // ==== Define methods for getting and setting styles ====
+    const methods = {
+      setBackgroundColor: function(newColor=null) {
+        state.backgroundColor = newColor;
+        $(document).ready(function() {
+          $(this).find('.calendar_background').css('background', state.backgroundColor);
+        });
+      },
+      getBackgroundColor: function() {
+        return state.backgroundColor;
+      },
+
+      // ==== left background methods ====
+      setLeftBackgroundColor: function(newColor=null) {
+        state.leftBackgroundColor = newColor;
+        $(document).ready(function() {
+          $(this).find('.calendar-left').css('background', state.leftBackgroundColor);
+        });
+      },
+      getLeftBackgroundColor: function() {
+        return state.leftBackgroundColor;
+      },
+
+      // ==== current day color ====
+      setCurrentDayColor: function(newColor=null) {
+        state.currentDayColor = newColor;
+        $(document).ready(function() {
+          $(this).find('.current_calender_background').css('background', state.currentDayColor);
+        });
+      },
+      getCurrentDayColor: function() {
+        return state.currentDayColor;
+      }
+
+    };
+    
+    // ===== Attach the methods to the element ====
+    this.data('createCalendar', methods);
 
     const calendarHTML = `
     <div class="c-container">
@@ -166,8 +212,13 @@
           });
         });
       });
+    // ==== change font-size-adjust for font 7 ====
+    if ($('body').css('font-family') === 'font7') {
+      $('body').css('font-size-adjust', '0.4')
+    }
     }
     dashboardCalendar();
+
   });
   
   return $(this).html(calendarHTML);
